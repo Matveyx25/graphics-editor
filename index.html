@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Графический редактор</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+		<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div class="main-wrapper">
+		<button class="remove-btn" id="remove-btn" disabled>
+			<img src="./icons/trash.svg" alt="">
+		</button>
+		<div class="elements-group">
+			<button class="element-btn" id="prlg-btn">
+				<img src="./icons/prlg.svg" alt="">
+			</button>
+			<button class="element-btn" id="curve-btn">
+				<img src="./icons/curve.svg" alt="">
+			</button>
+			<button class="element-btn" id="corner-btn">
+				<img src="./icons/corner.svg" alt="">
+			</button>
+			<button class="element-btn" id="line-btn">
+				Line
+			</button>
+		</div>
+		<div class="tmo-group">
+			<button class="tmo-btn" id="subtract-btn" disabled>
+				<img src="./icons/subtract.svg" alt="">
+			</button>
+			<button class="tmo-btn" id="intersect-btn" disabled>
+				<img src="./icons/intersect.svg" alt="">
+			</button>
+		</div>
+		<svg class="drawing-canvas">
+
+		</svg>
+		<div class="toolbar">
+			<div class="transform-group">
+				<button id="move-btn">
+					<img src="./icons/move.svg" alt="">
+					<input type="number" placeholder="0" id="scale-input" value="100" disabled>
+				</button>
+				<button id="rotate-btn">
+					<img src="./icons/rotate.svg" alt="">
+					<input type="number" placeholder="0" id="rotate-input" disabled>
+				</button>
+			</div>
+			<div class="centerFlex">
+				<div class="input-group">
+					<div class="input-title">Center X: </div>
+					<input type="number" id="x-center-input" disabled>
+				</div>
+				<div class="input-group">
+					<div class="input-title">Center Y: </div>
+					<input type="number" id="y-center-input" disabled>
+				</div>
+			</div>
+			<div class="colors-group">
+				Заливка: <input type="color" name="" id="">
+			</div>
+		</div>
+	</div>
+
+	<script src="./render.js"></script>
+	<script src="./main.js"></script>
+</body>
+</html>
